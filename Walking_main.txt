@@ -1,0 +1,54 @@
+0 rem !to "build/main.prg"
+10 ifaa=0thenpoke56,92:clr:aa=1:print"loading map...":load"town.kla",8,1
+15 rem copy memory
+20
+poke88,0:poke89,95:poke90,64:poke91,130:poke781,4:poke782,0:sys41964
+30
+poke88,0:poke89,219:poke90,40:poke91,134:poke781,4:poke782,0:sys41964
+40 ax=152:ay=96:dx=0:dy=0:pd=0:pf=1:d=1
+45 xl=24:yl=96:xh=320:yh=184
+50 rem set up screen
+60 poke56576,150:rem vic bank
+65 v=53248:v1=53249:p0=24568:b9=53264:t7=255:t8=256
+70 pokev+17,59:pokev+22,216:pokev+24,121:pokev+32,0:pokev+33,15
+80 poke 53277,0:rem normal width
+90 poke 53271,0:rem normal height
+100 poke p0,pd*3+pf
+110 lx=ax:iflx>t7thenlx=lx-t8
+120 poke v,lx:rem x pos
+130 poke v1,ay:rem y pos
+140 ifax>t7thenpokeb9,1
+150 if ax<=t7thenpokeb9,.
+200 :
+201 rem player input
+202 :
+210 dx=.:dy=.
+220 getk$:ifk$=""then220
+230 ifk$="w"thenpd=2:dy=-4
+240 ifk$="s"thenpd=0:dy=4
+250 ifk$="a"thenpd=1:dx=-4
+260 ifk$="d"thenpd=3:dx=4
+300 :
+301 rem animation frames
+302 :
+310 ifdx<>0ordy<>0thenpf=pf+d:ifpf=0orpf=2thend=-d
+400 :
+401 rem update position
+402 :
+410 ax=ax+dx:ay=ay+dy
+500 :
+501 rem boundary checks
+502 :
+510 ifax<xlthenax=xl
+520 ifay<ylthenay=yl
+530 ifax>xhthenax=xh
+540 ifay>yhthenay=yh
+995 goto 100
+999 end
+JOYSTICK:
+510 j=peek(56320)
+515 if(jand1)=0thenpd=2:dy=-4
+520 if(jand2)=0thenpd=0:dy=4
+525 if(jand4)=0thenpd=1:dx=-4
+530 if(jand8)=0thenpd=3:dx=4
+save"@0:main",8
