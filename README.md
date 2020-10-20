@@ -15,7 +15,7 @@ A walk-around demo for the Commodore 64
 
 Run with Vice, or another Commodore 64 emulator.
 
-How to run:
+#### How to run:
 
     Attach Demo.d64 to a drive.
     Load the "BOOT" file
@@ -29,7 +29,7 @@ For more info please visit:
 
 https://gbatemp.net/download/c64-sprite-movement-demo.36444/
 
-Credits:
+#### Credits:
 
 IanSkinner1982 for making the program.
 
