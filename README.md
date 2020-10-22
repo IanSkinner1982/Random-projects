@@ -1,5 +1,15 @@
 # Random-projects
 A bunch of random projects that aren't big enough to have their own repository.
+<p align="center">
+
+<a href="https://discord.com/invite/kJac2ty">
+        <img src="https://img.shields.io/discord/704065693246685225?color=purple&label=Discord&logo=Discord&style=plastic"
+            alt="Chat on Discord">
+</a>
+<a href="https://www.youtube.com/channel/UCjbecKNosrmUgRIOqU0UxCw/" style="padding-left: 5px; padding-right: 5px;">
+		<img src="https://img.shields.io/badge/YouTube-Channel-red.svg" height="20">
+</a>
+</p>
 
 ## Math-game.d64
  A math game for the Commodore 64 that reviews the area of shapes.
