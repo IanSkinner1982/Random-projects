@@ -1,0 +1,124 @@
+0 rem !to "build/math.prg"
+10 poke 53280,0:poke 53281,0:print"^"
+15 print "{clr-home}"
+20 print "calculating the areas of shapes
+"
+25 print "written by ianskinner1982"
+30 print "v1.0.1"
+35 print " "
+40 print "if you want area of a triangle
+press t"
+45 print"if you want area of a rectangle
+ press r"
+50 print"if you want area of a circle pr
+ess c"
+55 print"          press space to quit."
+
+60 get k$: if k$=""then 35
+65 if k$=" "then 2990
+70 if k$="t"then goto 3000
+75 if k$="r"thengoto9000
+80 if k$="c"thengoto15000
+85 if k$<>"c"then19000
+2990 print"\quit (y/n)?^"
+2991 get k$: if k$=""then 2991
+2992 if k$="n"then 15
+2993 if k$="y"then 2997
+2994 if k$<>"y"then 2991
+2997 print"{clr-home}";
+2998 poke 53280,14:poke 53281,6:print"Z";
+2999 end
+3000 print"{clr-home}"
+3010 tb=int(rnd(ti)*100)+1
+3020 th=int(rnd(ti)*100)+1
+3030 ta=tb*th/2
+3040 print"Sbase: "tb"height"th;
+3042 print""
+3044 print""
+3048 print"t"
+3050 print"tt"
+3055 print"t t       a=b*h/2"
+3060 print"t  t"
+3065 print"t   t"
+3070 print"t    t"
+3075 print"ttttttt"
+3080 print""
+3085 print"what is the area?  ":input pg
+3090 if pg=ta then gosub 20000
+3095 if pg<>ta then 3040
+5050 print"{clr-home}"
+6000 goto19
+9000 print"{clr-home}"
+9010 rl=int(rnd(ti)*100)+1
+9020 rw=int(rnd(ti)*100)+1
+9030 ra=rl*rw
+9040 print"Slength: "rl"width"rw;
+9042 print""
+9044 print""
+9048 print"rrrrrrrrrrrr"
+9050 print"r          r"
+9055 print"r          r    a=l*w"
+9060 print"r          r"
+9065 print"r          r"
+9070 print"r          r"
+9075 print"rrrrrrrrrrrr"
+9080 print""
+9085 print"what is the area?  ":input pg
+9090 if pg=ra then gosub 30000
+9095 if pg<>ra then 9040
+11050 print"{clr-home}"
+12000 goto19
+15000 print"{clr-home}"
+15020 cr=int(rnd(ti)*50)+1
+15030 ca$=str$(int(314*cr*cr)/100)
+15040 print"Sradius: "cr
+15042 print""
+15044 print""
+15048 print"  ccc  "
+15050 print" c   c "
+15055 print"c     c               due to
+ a decimal"
+15060 print"c  rrrc a=.*r^2         bug,
+ use 3.14"
+15065 print"c     c                inste
+ad of '.'."
+15070 print" c   c "
+15075 print"  ccc  "
+15080 print""
+15085 print"what is the area?  ":input pg
+$
+15087 xg$=" "+pg$
+15090 if ca$=xg$ then gosub 40000
+15095 if xg$<>ca$ then 15040
+17050 print"{clr-home}"
+18000 goto19
+19000 print"{home}":rem main menu k$ thingie
+19005 print"":goto20
+20000 print"good job!":rem triangle
+20015 print"press r to play again."
+20017 print"press space to return to the
+ menu"
+20020 get k$: if k$=""then 20020
+20025 if k$="r" then 3000
+20030 if k$=" "then 15
+20035 if k$<>" "then 20020
+20150 return
+30000 print"good job!":rem rectangle
+30015 print"press r to play again."
+30017 print"press space to return to the
+ menu"
+30020 ge tk$: if k$="" then 30020
+30025 if k$="r" then 9000
+30030 if k$=" " then 15
+30035 if k$<>" " then 30020
+30150 return
+40000 print"good job!":rem circle
+40015 print"press r to play again."
+40017 print"press space to return to the
+ menu"
+40020 get k$:if k$="" then 40020
+40025 if k$="r" then 15000
+40030 if k$=" " then 15
+40035 if k$<>" " then 40020
+40150 return
+50000 end
