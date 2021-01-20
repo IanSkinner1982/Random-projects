@@ -1,0 +1,59 @@
+0 x=0:dx=0:px=0:y=0:dy=0:py=0
+10 print"{left}{down}{down}{down}{down}{down}{down}           you are an idi
+ot"
+20 print"           v1.0.0"
+30 print"{down}          by ianskinner1982"
+40 print"{down}      press any key to continue
+"
+50 get s$:ifs$=""then10
+60 print"{clr-home}"
+70 goto 3000
+80 print"{home}"
+90 remc=int(16*rnd(1)):if c=6 then 30
+100 rempoke646,c
+110 x=int(19*rnd(1))
+120 dx=int(19*rnd(1))
+130 y=int(42*rnd(1))
+140 dy=int(42*rnd(1))
+150 if dx<x then goto 40
+160 if dy<y then goto 40
+170 print"{home}"
+180 for px=x to dx:print"{down}";:next
+190 for py=y to dy:print"{left}";:next
+200 print"{$b0}{$b0}RCCC{$ae}"
+220 print"{home}"
+230 for px=x to dx:print"{down}";:next
+240 for py=y to dy:print"{left}";:next
+250 print"{down}BV{$ab}CCCS"
+260 print"{home}"
+270 for px=x to dx:print"{down}";:next
+280 for py=y to dy:print"{left}";:next
+290 print"{down}{down}{$ab}C{$bd}   B"
+300 print"{home}"
+310 for px=x to dx:print"{down}";:next
+320 for py=y to dy:print"{left}";:next
+330 print"{down}{down}{down}BidiotB"
+340 print"{home}"
+350 for px=x to dx:print"{down}";:next
+360 for py=y to dy:print"{left}";:next
+370 print"{down}{down}{down}{down}MCCCCC{$bd}";
+380 goto 25
+1000 end
+3000 rem before main
+3010 for px=x to dx+5:print"{down}";:next
+3020 print"     "
+3030 print"     {$b0}CRCCCCCCCCCCCCCCC{$ae}"
+3040 print"     BV{$ab}CCCCCCCCCCCCCCCS"
+3050 print"     {$ab}C{$bd}..   ..   ..   B"
+3060 print"     B                 B"
+3070 print"     B  JK   JK   JK   B"
+3080 print"     B     you are     B"
+3090 print"     B       an        B"
+3100 print"     B      idiot      B"
+3110 print"     B                 B"
+3120 print"     B     PCCCCN      B"
+3130 print"     B     BokayB      B"
+3140 print"     B     MCCCC.      B"
+3150 print"     MCCCCCCCCCCCCCCCCC{$bd}"
+3160 goto 80
+20000 end
