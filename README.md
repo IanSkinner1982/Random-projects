@@ -5,11 +5,8 @@ A bunch of random projects that aren't big enough to have their own repository.
 <a href="https://discord.com/invite/kJac2ty">
         <img src="https://img.shields.io/discord/704065693246685225?color=purple&label=Discord&logo=Discord&style=plastic"
             alt="Chat on Discord">
-</a>
-<a href="https://www.youtube.com/channel/UCjbecKNosrmUgRIOqU0UxCw/" style="padding-left: 5px; padding-right: 5px;">
-		<img src="https://img.shields.io/badge/YouTube-Channel-red.svg" height="20">
-</a>
 </p>
+<p>Run the .prg files (in /build) with Vice. https://vice-emu.sourceforge.io/</p>
 
 ## Math-game.d64
  A math game for the Commodore 64 that reviews the area of shapes.
@@ -27,9 +24,9 @@ Run with Vice, or another Commodore 64 emulator.
 
 #### How to run:
 
-    Attach Demo.d64 to a drive.
-    Load the "BOOT" file
-    Run the "BOOT" file, and wait...
+    Attach Walking.d64 to a drive.
+    Load and run the "BOOT" file
+    Wait...
 
 The program will cycle through multiple colors while it is loading. It may take up to a minute. Some text will appear, then disappear, and the program should soon be ready.
 
@@ -48,9 +45,6 @@ IanSkinner1982 for making the program.
 
 ## You-are-an-idiot-C64
 You are an idiot for the Commodore 64.
-
-Run the .d64 file with vice.
-https://vice-emu.sourceforge.io/
 
 For more info please visit:
 
