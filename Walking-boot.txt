@@ -1,4 +1,4 @@
-0 rem !to "build/boot.prg"
+0 rem !to "build/walking-boot.prg"
 10 print chr$(147);:poke53280,0:poke53281,15:poke646,6
 20 poke 56,92:rem top of basic
 30 poke 650,128:rem keyboard repeat
@@ -81,7 +81,7 @@
 1590 data 48,255,48,60,252,48,15,15,192,0,0,0,0,0,0,129
 10000 q$=chr$(34):rem quotes
 10005 d$=chr$(17):rem cursor down
-10010 print"load";q$;"main";q$;",8"
+10010 print"load";q$;"walking-main";q$;",8"
 10020 printd$;d$;d$;d$;"run"
 10025 rem load keyboard buffer and flush it
 10030 poke631,19:poke632,13:poke633,13:poke198,3

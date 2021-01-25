@@ -1,4 +1,4 @@
-0 rem !to "build/main.prg"
+0 rem !to "build/walking-main.prg"
 10 ifaa=0thenpoke56,92:clr:aa=1:print"loading map...":load"town.kla",8,1
 15 rem copy memory
 20
@@ -51,4 +51,4 @@ JOYSTICK:
 520 if(jand2)=0thenpd=0:dy=4
 525 if(jand4)=0thenpd=1:dx=-4
 530 if(jand8)=0thenpd=3:dx=4
-save"@0:main",8
+save"@0:walking-main",8

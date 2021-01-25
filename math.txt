@@ -1,103 +1,109 @@
 0 rem !to "build/math.prg"
-10 poke 53280,0:poke 53281,0:print"^"
-15 print "{clr-home}"
-20 print "calculating the areas of shapes
-"
-25 print "written by ianskinner1982"
-30 print "v1.0.1"
-35 print " "
-40 print "if you want area of a triangle
-press t"
-45 print"if you want area of a rectangle
- press r"
-50 print"if you want area of a circle pr
-ess c"
-55 print"          press space to quit."
-
-60 get k$: if k$=""then 35
-65 if k$=" "then 2990
-70 if k$="t"then goto 3000
-75 if k$="r"thengoto9000
-80 if k$="c"thengoto15000
-85 if k$<>"c"then19000
+10 poke 53280,0:poke 53281,0:poke646,5
+15 print "{clear}{home}"
+20 print"{$b0}CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC{$ae}"
+25 print"Bcalculating the areas of shapes      B"
+30 print"Bv1.0.1                               B"
+35 print"B                                     B"
+40 print"B                                     B"
+45 print"Bif you want area of...               B"
+50 print"B                                     B"
+55 print"B   a triangle press t                B"
+60 print"B   a rectangle press r               B"
+65 print"B   a circle press c                  B"
+70 print"B                                     B"
+75 print"Bpress the spacebar to quit.          B"
+80 print"{$ab}CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC{$b3}"
+85 print"B    copyright ian m. skinner 2021    B"
+90 print"{$ad}CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC{$bd}"
+1000 get k$: if k$=""then 1000
+1010 if k$=" "then 2990
+1020 if k$="t"then goto 3000
+1030 if k$="r"thengoto9000
+1040 if k$="c"thengoto15000
+1050 if k$<>"c"then19000
 2990 print"\quit (y/n)?^"
 2991 get k$: if k$=""then 2991
 2992 if k$="n"then 15
 2993 if k$="y"then 2997
 2994 if k$<>"y"then 2991
-2997 print"{clr-home}";
+2997 print"{clear}{home}";
 2998 poke 53280,14:poke 53281,6:print"Z";
 2999 end
-3000 print"{clr-home}"
+3000 print"{clear}{home}"
 3010 tb=int(rnd(ti)*100)+1
 3020 th=int(rnd(ti)*100)+1
 3030 ta=tb*th/2
-3040 print"Sbase: "tb"height"th;
-3042 print""
-3044 print""
-3048 print"t"
-3050 print"tt"
-3055 print"t t       a=b*h/2"
-3060 print"t  t"
-3065 print"t   t"
-3070 print"t    t"
-3075 print"ttttttt"
-3080 print""
-3085 print"what is the area?  ":input pg
-3090 if pg=ta then gosub 20000
-3095 if pg<>ta then 3040
-5050 print"{clr-home}"
+3035 print"{clear}{$b0}CCCCCCCCCCCCCCCCCCCCCCCCC{$ae}"
+3040 print"B                         B"
+3045 print"{up}B base: "tb" height: "th"
+3050 print"B                         B"
+3055 print"B                         B"
+3060 print"B t                       B"
+3065 print"B tt                      B"
+3070 print"B t t       a=b*h/2       B"
+3075 print"B t  t                    B"    
+3080 print"B t   t                   B"
+3085 print"B t    t                  B"
+3090 print"B ttttttt                 B"
+3095 print"B                         B"
+3100 print"{$ad}CCCCCCCCCCCCCCCCCCCCCCCCC{$bd}"
+3105 print"what is the area?  ":input pg
+3110 if pg=ta then gosub 20000
+3115 if pg<>ta then 3035
+5050 print"{clear}{home}"
 6000 goto19
-9000 print"{clr-home}"
+9000 print"{clear}{home}"
 9010 rl=int(rnd(ti)*100)+1
 9020 rw=int(rnd(ti)*100)+1
 9030 ra=rl*rw
-9040 print"Slength: "rl"width"rw;
-9042 print""
-9044 print""
-9048 print"rrrrrrrrrrrr"
-9050 print"r          r"
-9055 print"r          r    a=l*w"
-9060 print"r          r"
-9065 print"r          r"
-9070 print"r          r"
-9075 print"rrrrrrrrrrrr"
-9080 print""
-9085 print"what is the area?  ":input pg
-9090 if pg=ra then gosub 30000
-9095 if pg<>ra then 9040
-11050 print"{clr-home}"
+9035 print"{clear}{$b0}CCCCCCCCCCCCCCCCCCCCCCCCC{$ae}"
+9040 print"B                         B"
+9045 print"{up}B length: "rl" width: "rw"
+9050 print"B                         B"
+9055 print"B                         B"
+9060 print"B rrrrrrrrrrrr            B"
+9065 print"B r          r            B"
+9070 print"B r          r    a=l*w   B"
+9075 print"B r          r            B"    
+9080 print"B r          r            B"
+9085 print"B r          r            B"
+9090 print"B rrrrrrrrrrrr            B"
+9095 print"B                         B"
+9100 print"{$ad}CCCCCCCCCCCCCCCCCCCCCCCCC{$bd}"
+9110 print"what is the area?  ":input pg
+9120 if pg=ra then gosub 30000
+9130 if pg<>ra then 9035
+11050 print"{clear}{home}"
 12000 goto19
-15000 print"{clr-home}"
+15000 print"{clear}{home}"
 15020 cr=int(rnd(ti)*50)+1
 15030 ca$=str$(int(314*cr*cr)/100)
-15040 print"Sradius: "cr
-15042 print""
-15044 print""
-15048 print"  ccc  "
-15050 print" c   c "
-15055 print"c     c               due to
- a decimal"
-15060 print"c  rrrc a=.*r^2         bug,
- use 3.14"
-15065 print"c     c                inste
-ad of '.'."
-15070 print" c   c "
-15075 print"  ccc  "
-15080 print""
-15085 print"what is the area?  ":input pg
-$
-15087 xg$=" "+pg$
-15090 if ca$=xg$ then gosub 40000
-15095 if xg$<>ca$ then 15040
-17050 print"{clr-home}"
+15035 print"{clear}{$b0}CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC{$ae}"
+15040 print"B                                   B"
+15045 print"{up}B radius: "cr
+15050 print"B                                   B"
+15055 print"B                                   B"
+15060 print"B  ccc             due to a decimal B"
+15065 print"B c   c            bug, use 3.14    B"
+15070 print"Bc     c           instead of '{$ff}'.  B"
+15075 print"Bc  rrrc                            B"    
+15080 print"Bc     c                            B"
+15085 print"B c   c    a={$ff}*r^2                  B"
+15090 print"B  ccc                              B"
+15095 print"B                                   B"
+15100 print"{$ad}CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC{$bd}"
+15110 print"what is the area?  ":input pg $
+15120 xg$=" "+pg$
+15130 if ca$=xg$ then gosub 40000
+15140 if xg$<>ca$ then 15035
+17050 print"{clear}{home}"
 18000 goto19
 19000 print"{home}":rem main menu k$ thingie
 19005 print"":goto20
 20000 print"good job!":rem triangle
 20015 print"press r to play again."
-20017 print"press space to return to the
- menu"
+20017 print"press space to return to the menu"
 20020 get k$: if k$=""then 20020
 20025 if k$="r" then 3000
 20030 if k$=" "then 15
@@ -105,17 +111,15 @@ $
 20150 return
 30000 print"good job!":rem rectangle
 30015 print"press r to play again."
-30017 print"press space to return to the
- menu"
-30020 ge tk$: if k$="" then 30020
+30017 print"press space to return to the menu"
+30020 getk$: if k$="" then 30020
 30025 if k$="r" then 9000
 30030 if k$=" " then 15
 30035 if k$<>" " then 30020
 30150 return
 40000 print"good job!":rem circle
 40015 print"press r to play again."
-40017 print"press space to return to the
- menu"
+40017 print"press space to return to the menu"
 40020 get k$:if k$="" then 40020
 40025 if k$="r" then 15000
 40030 if k$=" " then 15
