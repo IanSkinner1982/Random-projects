@@ -1,4 +1,4 @@
-0 rem !to "build/walking-main.prg"
+0 rem !to "build/main.prg"
 10 ifaa=0thenpoke56,92:clr:aa=1:print"loading map...":load"town.kla",8,1
 15 rem copy memory
 20

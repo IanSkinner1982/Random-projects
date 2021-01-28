@@ -1,4 +1,4 @@
-0 rem !to "build/walking-boot.prg"
+0 rem !to "build/boot.prg"
 10 print chr$(147);:poke53280,0:poke53281,15:poke646,6
 20 poke 56,92:rem top of basic
 30 poke 650,128:rem keyboard repeat
